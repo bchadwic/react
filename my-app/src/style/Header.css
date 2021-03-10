@@ -17,3 +17,18 @@
     border-right-width: thin;
     border-right-style: solid;
 }
+
+@media (max-width: 600px){
+
+    #Login {
+        border: 0;
+    }
+
+    #Mobile-Collapse {
+        margin-top: 2%;
+        background-color: #000000;
+        border: thin solid white;
+        border-radius: 5px;
+    }
+
+}

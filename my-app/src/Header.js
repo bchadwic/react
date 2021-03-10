@@ -17,10 +17,11 @@ const Header = () => {
                 <Navbar.Brand href='#' id='Brand'>Word Bubble</Navbar.Brand>
                 {/* Navbar toggle allows for the mobile dropdown nav menu */}
                 <Navbar.Toggle />
-                <Navbar.Collapse className='justify-content-end'>
-                    <Nav>
-                        <Nav.Link href="#" id='Login' className='pr-3'>Login</Nav.Link>
-                        <Nav.Link href="#" id='Sign-up' className='pl-3'>Sign-up</Nav.Link>
+                <Navbar.Collapse className='justify-content-end' >
+                    <Nav id="Mobile-Collapse" >
+                        <Nav.Link href="#" id='Login' className='pr-sm-3'>Login</Nav.Link>
+                        <hr id="Mobile-Divider"/>
+                        <Nav.Link href="#" id='Sign-up' className='pl-sm-3'>Sign-up</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
