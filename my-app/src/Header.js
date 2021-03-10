@@ -1,10 +1,7 @@
 // manage all the bootstrap for the navbar
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
-import NavbarCollapse from 'react-bootstrap/NavbarCollapse';
-import Image from "react-bootstrap/Image";
 import Nav from 'react-bootstrap/Nav';
-import NavbarToggle from "react-bootstrap/cjs/NavbarToggle";
 import './style/Header.css';
 
 const Header = () => {
