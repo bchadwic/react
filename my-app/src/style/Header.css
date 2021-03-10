@@ -18,15 +18,20 @@
     border-right-style: solid;
 }
 
-@media (max-width: 600px){
+.Nav-Link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 575px){
 
     #Login {
         border: 0;
+        border-bottom: thin solid #ffffff;
     }
 
     #Mobile-Collapse {
         margin-top: 2%;
-        background-color: #000000;
+        background-color: black;
         border: thin solid white;
         border-radius: 5px;
     }
