@@ -1,0 +1,19 @@
+#Header {
+    background-image: linear-gradient(to left, deepskyblue, black);
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#Brand {
+    color: #ffffff;
+}
+
+#Login, #Sign-up {
+    color: #ffffff;
+}
+
+#Login {
+    border-right: white;
+    border-right-width: thin;
+    border-right-style: solid;
+}

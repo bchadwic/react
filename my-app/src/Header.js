@@ -1,8 +1,31 @@
-function Header(){
+// manage all the bootstrap for the navbar
+import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
+import NavbarCollapse from 'react-bootstrap/NavbarCollapse';
+import Image from "react-bootstrap/Image";
+import Nav from 'react-bootstrap/Nav';
+import NavbarToggle from "react-bootstrap/cjs/NavbarToggle";
+import './style/Header.css';
+
+const Header = () => {
     return (
-        <div className="Header">
-            <h1>Word</h1>
+        <Container>
+        {/* Elements are stored in container to prevent stretched navbar on large screen */}
+        <div id='Header'>
+            {/* Navbar collapses to fold view at small */}
+            <Navbar expand='sm'>
+                <Navbar.Brand href='#' id='Brand'>Word Bubble</Navbar.Brand>
+                {/* Navbar toggle allows for the mobile dropdown nav menu */}
+                <Navbar.Toggle />
+                <Navbar.Collapse className='justify-content-end'>
+                    <Nav>
+                        <Nav.Link href="#" id='Login' className='pr-3'>Login</Nav.Link>
+                        <Nav.Link href="#" id='Sign-up' className='pl-3'>Sign-up</Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Navbar>
         </div>
+        </Container>
     )
 }
 
