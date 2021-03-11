@@ -9,11 +9,11 @@ import './style/SearchBar.css';
 
 const SearchBar = () => {
     return (
-        <Container id='Search-Container'>
-            <InputGroup className="mt-3 w-75 mx-auto" size='lg'>
+        <Container>
+            <InputGroup id='Search-Container' className="mt-3 mx-auto" size='lg'>
                 <FormControl
 
-                    id='SearchBox'
+                    id='Search-Box'
                     placeholder="Type a word to begin"
                     aria-label=""
                 />

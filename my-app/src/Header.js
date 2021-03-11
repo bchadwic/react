@@ -15,7 +15,7 @@ const Header = () => {
                 {/* Navbar toggle allows for the mobile dropdown nav menu */}
                 <Navbar.Toggle id='Mobile-Nav-Button'/>
                 <Navbar.Collapse className='justify-content-end'>
-                    <Nav id="Mobile-Collapse" >
+                    <Nav id="Mobile-Collapse" className='mx-0 px-0'>
                         <Nav.Link href="#" id='Login' className='Nav-Link pr-sm-3'>Login</Nav.Link>
                         <Nav.Link href="#" id='Sign-up' className='Nav-Link pl-sm-3'>Sign-up</Nav.Link>
                     </Nav>
