@@ -1,0 +1,28 @@
+#Search-Container {
+    max-width: 800px;
+}
+
+#Search-Button {
+    background: deepskyblue;
+    border-color: deepskyblue;
+    border-left: thin solid;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+#SearchBox {
+    color: white;
+    border: none;
+    border-right: thin solid;
+    background-image: linear-gradient(to right, black, deepskyblue);
+}
+
+#SearchBox::placeholder {
+    color: #a4a4a4;
+}
+
+#Search-Button:focus, #SearchBox:focus {
+    outline:none;
+    box-shadow: none;
+}
+
