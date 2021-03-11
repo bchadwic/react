@@ -1,3 +1,7 @@
+#Search-Container {
+    max-width: 600px;
+}
+
 #Search-Button {
     background: deepskyblue;
     border-color: deepskyblue;
@@ -6,18 +10,18 @@
     border-top-left-radius: 0;
 }
 
-#SearchBox {
+#Search-Box {
     color: white;
     border: none;
     border-right: thin solid;
     background-image: linear-gradient(to right, black, deepskyblue);
 }
 
-#SearchBox::placeholder {
-    color: #a4a4a4;
+#Search-Box::placeholder {
+    color: lightgray;
 }
 
-#Search-Button:focus, #SearchBox:focus {
+#Search-Button:focus, #Search-Box:focus {
     outline:none;
     box-shadow: none;
 }

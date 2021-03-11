@@ -31,9 +31,8 @@
 
     #Mobile-Collapse {
         margin-top: 2%;
-        background-color: black;
-        border: thin solid white;
-        border-radius: 5px;
+        border: none;
+        border-top: thin solid white;
     }
 
 }
