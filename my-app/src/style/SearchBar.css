@@ -26,3 +26,7 @@
     box-shadow: none;
 }
 
+#Search-Button:hover {
+    border: thin solid #60d2f5;
+}
+

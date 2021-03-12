@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container";
 const Footnote = () => {
     return (
         <Container>
-            <h5 className='my-3'>Word of the day is <a href='#'><u>Hello</u></a>.</h5>
+            <h5 className='mt-3'>Word of the day is <a href='#'><u>Hello</u></a>.</h5>
         </Container>
     )
 }

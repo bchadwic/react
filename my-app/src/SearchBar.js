@@ -10,7 +10,7 @@ import './style/SearchBar.css';
 const SearchBar = () => {
     return (
         <Container>
-            <InputGroup id='Search-Container' className="mt-3 mx-auto" size='lg'>
+            <InputGroup id='Search-Container' className="mt-5 mx-auto" size='lg'>
                 <FormControl
 
                     id='Search-Box'

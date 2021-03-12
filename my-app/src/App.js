@@ -3,14 +3,16 @@ import './style/App.css';
 import React from "react";
 import Header from "./Header";
 import SearchBar from "./SearchBar";
-import Title from './Title';
+import Word from './Word';
+import Footnote from "./Footnote";
 
 function App() {
   return (
     <div className="App">
       <Header/>
-      <Title/>
+      <Word/>
       <SearchBar/>
+      <Footnote />
     </div>
   );
 }
