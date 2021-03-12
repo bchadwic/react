@@ -5,23 +5,25 @@ import InputGroup from "react-bootstrap/InputGroup";
 import FormControl from "react-bootstrap/FormControl";
 import React from "react";
 import './style/SearchBar.css';
+import Footnote from "./Footnote";
 
 class SearchBar extends React.Component {
     constructor() {
         super();
         this.state = {
-            input : ""
+            word : "",
+            default : true
         }
     }
 
     // validate makes sure the value of Search-Box is a word that should be looked up
     validate = () => {
-        let validate = (document.getElementById("Search-Box").value);
-        if(validate === ""){
-            validate = "Word Bubble";
+        let currentWord = (document.getElementById("Search-Box").value);
+        if(currentWord === ""){
+            currentWord = "Word Bubble";
         }
-        this.setState({input : validate});
-        this.props.setWord(validate);
+        this.setState({input : currentWord, default : currentWord === "Word Bubble"});
+        this.props.setWord(currentWord);
     }
 
     // searchEnter responds to the key event Enter on the searchbar
@@ -59,6 +61,7 @@ class SearchBar extends React.Component {
                         </InputGroup>
                     </InputGroup.Append>
                 </InputGroup>
+                <Footnote default={this.state.default}/>
             </Container>
         )
     }
