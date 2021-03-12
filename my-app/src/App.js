@@ -6,15 +6,26 @@ import SearchBar from "./SearchBar";
 import Word from './Word';
 import Footnote from "./Footnote";
 
-function App() {
-  return (
-    <div className="App">
-      <Header/>
-      <Word/>
-      <SearchBar/>
-      <Footnote />
-    </div>
-  );
+
+
+class App extends React.Component {
+
+
+    constructor() {
+        super();
+    }
+
+
+  render() {
+      return (
+          <div className="App">
+              <Header/>
+              <Word currentWord="Bubble Word" />
+              <Footnote/>
+          </div>
+      );
+  }
+
 }
 
 export default App;
