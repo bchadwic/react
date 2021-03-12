@@ -1,13 +1,10 @@
 // manage all the bootstrap for the searchbar
 import Container from "react-bootstrap/Container";
-import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import InputGroup from "react-bootstrap/InputGroup";
 import FormControl from "react-bootstrap/FormControl";
 import React from "react";
 import './style/SearchBar.css';
-
-
 
 class SearchBar extends React.Component {
     constructor() {
@@ -17,35 +14,35 @@ class SearchBar extends React.Component {
         }
     }
 
-    typedWord = () => {
-        let typedWord = (document.getElementById("Search-Box").value);
-        if(typedWord === ""){
-            typedWord = "Word Bubble";
+    // validate makes sure the value of Search-Box is a word that should be looked up
+    validate = () => {
+        let validate = (document.getElementById("Search-Box").value);
+        if(validate === ""){
+            validate = "Word Bubble";
         }
-        this.setState({input : typedWord});
+        this.setState({input : validate});
+        this.props.setWord(validate);
     }
 
-    enterKey = (e) => {
+    // searchEnter responds to the key event Enter on the searchbar
+    searchEnter = (e) => {
         if(e.key === 'Enter'){
-            this.typedWord();
-            this.props.setWord(this.state.input);
+            this.validate();
         }
     }
 
+    // searchClick responds to the search button being clicked
     searchClick = () => {
-        this.typedWord();
-        this.props.setWord(this.state.input);
+        this.validate();
     }
 
+    // render is the output of the SearchBar class
     render() {
-        let setWord = this.props.setWord;
         return (
             <Container>
                 <InputGroup id='Search-Container' className="mt-5 mx-auto" size='lg'>
                     <FormControl
-                        onChange={this.typedWord}
-                        onKeyDown={this.enterKey}
-
+                        onKeyDown={this.searchEnter}
                         id='Search-Box'
                         placeholder="Type a word to begin"
                         aria-label=""
