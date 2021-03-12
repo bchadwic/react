@@ -20,8 +20,7 @@ class App extends React.Component {
       return (
           <div className="App">
               <Header/>
-              <Word currentWord="Bubble Word" />
-              <Footnote/>
+              <Word />
           </div>
       );
   }

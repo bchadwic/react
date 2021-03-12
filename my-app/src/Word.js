@@ -6,10 +6,10 @@ import SearchBar from "./SearchBar";
 
 class Word extends React.Component {
 
-    constructor(props) {
+    constructor() {
         super();
         this.state = {
-            currentWord : "Bubble Word"
+            currentWord : "Word Bubble"
         };
     }
 
