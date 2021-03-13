@@ -11,7 +11,7 @@ const Footnote = props => {
             </Container>
         )
     }
-    return null;
+    return <hr/>;
 }
 
 export default Footnote 

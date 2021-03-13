@@ -1,6 +1,6 @@
 // manage all the bootstrap for the searchbar
 import Container from "react-bootstrap/Container";
-import './style/Word.css';
+import '../styles/Word.css';
 import React from "react";
 import SearchBar from "./SearchBar";
 

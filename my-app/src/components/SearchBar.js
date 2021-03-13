@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 import InputGroup from "react-bootstrap/InputGroup";
 import FormControl from "react-bootstrap/FormControl";
 import React from "react";
-import './style/SearchBar.css';
+import '../styles/SearchBar.css';
 import Footnote from "./Footnote";
 
 class SearchBar extends React.Component {
