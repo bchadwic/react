@@ -21,6 +21,8 @@ class SearchBar extends React.Component {
         let currentWord = (document.getElementById("Search-Box").value);
         if(currentWord === ""){
             currentWord = "Word Bubble";
+        } else {
+            this.isAlreadyDefined("hello");
         }
         this.setState({input : currentWord, default : currentWord === "Word Bubble"});
         this.props.setWord(currentWord);
