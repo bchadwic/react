@@ -3,7 +3,6 @@ import { React, useState } from "react";
 
 
 const Word = () => {
-
     const [word, setWord] = useState("Word Bubble");
     
     return (

@@ -1,9 +1,8 @@
-// manage all the bootstrap for the searchbar
+import {React, useState} from "react";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import InputGroup from "react-bootstrap/InputGroup";
 import FormControl from "react-bootstrap/FormControl";
-import {React, useState} from "react";
 import '../styles/SearchBar.css';
 
 const SearchBar = () => {
@@ -15,8 +14,6 @@ const SearchBar = () => {
         let currentWord = (document.getElementById("Search-Box").value);
         if(currentWord === ""){
             currentWord = "Word Bubble";
-        } else {
-            this.isAlreadyDefined("hello");
         }
         this.setState({input : currentWord, default : currentWord === "Word Bubble"});
         this.props.setWord(currentWord);

@@ -1,4 +1,7 @@
 #Header {
+    width: 900px;
+    max-width: 90vw;
+    align-self: center;
     background-image: linear-gradient(to left, deepskyblue, black);
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;

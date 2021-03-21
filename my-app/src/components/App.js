@@ -4,11 +4,12 @@ import Header from "./Header";
 import Word from './Word';
 import SearchBar from './SearchBar';
 import Footnote from './Footnote';
+import '../styles/App.css';
 
 const App = () => {
 
     return (
-        <div className="text-center">
+        <div className="App">
             <Header/>
             <Word />
             <SearchBar />
