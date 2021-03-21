@@ -2,28 +2,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React from "react";
 import Header from "./Header";
 import Word from './Word';
+import Footnote from './Footnote';
 import '../styles/App.css';
-import '../datalayer/DataLayer.js'
 
+const App = () => {
 
-
-class App extends React.Component {
-
-
-  constructor() {
-      super();
-
-  }
-
-
-  render() {
-      return (
-          <div className="App">
-              <Header/>
-              <Word />
-          </div>
-      );
-  }
+    return (
+        <div className="App">
+            <Header/>
+            <Word />
+            {true /*TODO need to add in default state parameter */ ? <Footnote wordOfTheDay="word" /> : <hr />}
+        </div>
+  );
 
 }
 
