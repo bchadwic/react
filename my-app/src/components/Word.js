@@ -1,33 +1,16 @@
 // manage all the bootstrap for the searchbar
-import Container from "react-bootstrap/Container";
-import '../styles/Word.css';
-import React from "react";
-import SearchBar from "./SearchBar";
-
-class Word extends React.Component {
-
-    constructor() {
-        super();
-        this.state = {
-            currentWord : "Word Bubble"
-        };
-    }
-
-    setWord = (word) => {
-        this.setState({currentWord : word});
-    }
+import { React, useState } from "react";
 
 
-    render() {
-        return (
-            <Container id='Title-Container' >
-                <h2 className='display-3'>{this.state.currentWord}</h2>
-                <SearchBar setWord={this.setWord}/>
-            </Container>
-        );
-    }
+const Word = () => {
+
+    const [word, setWord] = useState("Word Bubble");
+    
+    return (
+        <h2 className='display-3 mt-5'>{word}</h2>
+    );
 
 }
 
 
-export default Word
+export default Word;
