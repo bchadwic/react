@@ -5,4 +5,6 @@ const wordReducer = (state = "Word Bubble", action) => {
         default:
             return state;
     }
-}
+};
+
+export default wordReducer;

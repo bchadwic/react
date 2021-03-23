@@ -1,12 +1,14 @@
 // manage all the bootstrap for the searchbar
-import { React, useState } from "react";
+import { React } from "react";
+import { useSelector } from "react-redux";
 
 
 const Word = () => {
-    const [word, setWord] = useState("Word Bubble");
+
+    const currentWord = useSelector(state => state.currentWord);
     
     return (
-        <h2 className='display-3 mt-5'>{word}</h2>
+        <h2 className='display-3 mt-5'>{ currentWord }</h2>
     );
 
 }

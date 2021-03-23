@@ -1,7 +1,13 @@
-const setWord = (word) => {
+export const setWord = (word) => {
     return {
         type: 'SET_WORD',
-        payload: word
-    }
+        payload: word 
+    };
 
-}
+};
+
+export const setDefault = () => {
+    return {
+        type: 'NOT_DEFAULT_WORD'
+    };
+};

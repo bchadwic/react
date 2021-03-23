@@ -1,8 +1,10 @@
 import wordReducer from './wordReducer';
+import defaultReducer from './defaultReducer';
 import {combineReducers} from 'redux';
 
 const rootReducer = combineReducers({
-    wordReducer
+    currentWord: wordReducer,
+    isDefault: defaultReducer
 });
 
 export default rootReducer;
