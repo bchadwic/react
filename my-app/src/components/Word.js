@@ -8,7 +8,7 @@ const Word = () => {
     const currentWord = useSelector(state => state.currentWord);
     
     return (
-        <h2 className='display-3 mt-5'>{ currentWord }</h2>
+        <h2 className='display-3 mt-4'>{ currentWord }</h2>
     );
 
 }
