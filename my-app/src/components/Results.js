@@ -13,22 +13,26 @@ const Results = () => {
 
     return (
         <div>
-            <hr className="divider" />
-            <Container >
+        <hr />
+        <div className="Result-Root">
+            <div className="Results">
                 {results.map(result => ( 
-                <Card className="my-2">
-                    <Card.Body> 
-                        <Card.Text className="Card-Text">
+                <div className="Result-Box">
+                    <div className="Result-Body"> 
+                        <div className="Result-Text">
                             <h3>{result.definition}</h3>
-                        </Card.Text>
-                        <div className>
-                            <p><b>{result.rank}</b></p>
                         </div>
-                    </Card.Body>
-                    <Card.Footer className="Card-Footer">{result.user}</Card.Footer>
-                </Card>
+                    </div>
+                    <div className="Result-Side-Bar">
+                        <p><b>{result.rank}</b></p>
+                        <p>
+                            {result.user}
+                        </p>
+                    </div>
+                </div>
                 ))}
-                </Container>
+            </div>
+        </div>
         </div>
     );
 };
