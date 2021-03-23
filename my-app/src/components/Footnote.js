@@ -4,7 +4,7 @@ const Footnote = () => {
     const wordOfTheDay = "hello";
 
     return (
-        <h5 className='mt-3'>Word of the day is <button><u>{wordOfTheDay}</u></button>.</h5>
+        <h5 className='mt-3'>Word of the day is <a href="#"><u>{wordOfTheDay}</u></a>.</h5>
     )
 }
 
