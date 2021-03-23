@@ -3,14 +3,17 @@ import {Provider} from 'react-redux';
 import ReactDOM from 'react-dom';
 import './styles/index.css';
 import App from './components/App';
+import rootReducer from './reducers';
 import reportWebVitals from './reportWebVitals';
 
+const store = createStore(rootReducer);
 
 ReactDOM.render(
-  <React.StrictMode>
-    {/*TODO: create a store object to be passed to provider*/}
+  <Provider store={store}>
+    <React.StrictMode>
       <App />
-  </React.StrictMode>,
+    </React.StrictMode>
+  </Provider>,
   document.getElementById('root')
 );
 
