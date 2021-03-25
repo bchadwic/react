@@ -27,6 +27,7 @@ const SearchBar = () => {
         }
     }
 
+
     return (
         <Container>
             <form onSubmit={handleSubmit}>
@@ -34,9 +35,16 @@ const SearchBar = () => {
                     <FormControl id='Search-Box'placeholder="Type a word to begin" ref={currentWordInput}/>
                     <InputGroup.Append>
                         <InputGroup>
-                            <Button id='Search-Button' className='success' size='lg' type='submit'>
+                            <Button id='Search-Button' size='lg' type='submit'>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="mb-2 bi bi-search" viewBox="0 0 16 16">
                                     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                </svg>
+                            </Button>
+                        </InputGroup>
+                        <InputGroup>
+                            <Button id='Add-Button' className='ml-2' type='submit'>
+                                <svg id='Add-Symbol' width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+                                    <path d="M11 11v-11h1v11h11v1h-11v11h-1v-11h-11v-1h11z"/>
                                 </svg>
                             </Button>
                         </InputGroup>

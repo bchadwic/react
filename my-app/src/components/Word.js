@@ -1,7 +1,5 @@
-// manage all the bootstrap for the searchbar
 import { React } from "react";
 import { useSelector } from "react-redux";
-
 
 const Word = () => {
 
@@ -12,6 +10,5 @@ const Word = () => {
     );
 
 }
-
 
 export default Word;

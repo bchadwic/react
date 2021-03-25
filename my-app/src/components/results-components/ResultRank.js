@@ -1,5 +1,3 @@
-import '../../styles/Results.css';
-
 const ResultRank = ({rank}) => {
     return (
         <div className="Result-Rank">
