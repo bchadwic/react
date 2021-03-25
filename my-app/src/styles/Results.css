@@ -60,6 +60,16 @@
 
 .Result-Rank {
     margin: auto;
+    padding-top: 12%;
+    padding-bottom: 12%;
+}
+
+
+.Result-Number {
+    max-width: 12vw;
+    white-space: nowrap;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
 }
 
 .Up-Arrow {
