@@ -10,6 +10,16 @@
     border-top-left-radius: 0;
 }
 
+#Add-Button {
+    background: deepskyblue;
+    border-color: deepskyblue;
+}
+
+#Add-Symbol {
+    fill: white;
+    scale: 80%;
+}
+
 #Search-Box {
     color: white;
     border: none;
@@ -21,12 +31,12 @@
     color: lightgray;
 }
 
-#Search-Button:focus, #Search-Box:focus {
+#Add-Button:focus, #Search-Button:focus, #Search-Box:focus {
     outline:none;
     box-shadow: none;
 }
 
-#Search-Button:hover {
+#Add-Button:hover, #Search-Button:hover {
     border: thin solid #60d2f5;
 }
 
