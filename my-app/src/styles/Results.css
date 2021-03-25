@@ -33,10 +33,10 @@
     border-bottom-right-radius: inherit;
     background-image: linear-gradient(to right, #298fd3, deepskyblue);
     color: white;
-    justify-self: flex-end;
-    margin-left: auto;
+    justify-content: flex-end;
     width: 20%;
 }
+
 
 .Results {
     max-width: 800px;
@@ -59,7 +59,7 @@
 
 
 .Result-Rank {
-    
+    margin: auto;
 }
 
 .Up-Arrow {
