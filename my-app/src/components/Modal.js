@@ -3,13 +3,24 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import FormControl from 'react-bootstrap/FormControl';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import { unsetAdd } from '../actions';
+import { useDispatch } from 'react-redux';
 
 const Modal = () => {
+
+
+    const dispatch = useDispatch();
+
+    const closeHandler = () => {
+        dispatch(unsetAdd());
+    }
+
     return (
         <div className="Modal-Back-Drop">
         <div className="Modal">
             <div className="Modal-Header">
                 <h4>Contribute to the dictionary!</h4>
+                <button onClick={closeHandler}>X</button>
             </div>
             <Form>
                     <div className="Modal-Word">

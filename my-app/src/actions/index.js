@@ -11,8 +11,20 @@ export const setDefault = () => {
     };
 };
 
+export const unsetDefault = () => {
+    return {
+        type: 'DEFAULT_WORD'
+    };
+};
+
 export const setAdd = () => {
     return {
-        type: 'ADD_A_WORD'
+        type: 'OPEN_ADD_MODAL'
+    };
+};
+
+export const unsetAdd = () => {
+    return {
+        type: 'CLOSE_ADD_MODAL'
     };
 };
