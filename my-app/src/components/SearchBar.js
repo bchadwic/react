@@ -22,6 +22,12 @@ const SearchBar = () => {
         }
         currentWord = words.join(' ');
         dispatch(setWord(currentWord));
+
+        /*
+        
+        fetch from the api, all the objects attached to this word
+        
+        */
         if(isDefault){
             dispatch(setDefault());
         }

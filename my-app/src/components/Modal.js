@@ -1,4 +1,5 @@
 import '../styles/Modal.css';
+import React from 'react';
 import InputGroup from 'react-bootstrap/InputGroup';
 import FormControl from 'react-bootstrap/FormControl';
 import Form from 'react-bootstrap/Form';
@@ -10,7 +11,7 @@ import { useEffect } from 'react';
 const Modal = () => {
 
     const dispatch = useDispatch();
-    const setFade = false;
+    let setFade = false;
 
     useEffect(() => {
         setFade = !setFade;
@@ -19,10 +20,10 @@ const Modal = () => {
     const closeHandler = () => {
         dispatch(unsetAdd());
     };
-
+//Modal {setFade ? Modal-Fade-In : Modal-Fade-Out}
     return (
         <div className="Modal-Back-Drop">
-        <div className='Modal {setFade ? Modal-Fade-In : Modal-Fade-Out}'>
+        <div className='Modal'>
             <div className="Modal-Header">
                 <h4>Contribute to the dictionary!</h4>
                 <button onClick={closeHandler}>X</button>
