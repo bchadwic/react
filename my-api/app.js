@@ -1,6 +1,6 @@
+const bodyParser = require('body-parser');
 const express = require('express');
 const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
 require('dotenv/config');
 
 const app = express();
@@ -12,6 +12,8 @@ const app = express();
 //});
 
 // declare middleware to make sure we are parsing post info as json (bodyParser)
+// if we need to use the api across domains, do...
+// app.use(cors());
 app.use(bodyParser.json());
 // Import Routes
 const postsRoutes = require('./routes/posts');
