@@ -1,6 +1,7 @@
 const bodyParser = require('body-parser');
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 require('dotenv/config');
 
 const app = express();
@@ -15,16 +16,18 @@ const app = express();
 // if we need to use the api across domains, do...
 // app.use(cors());
 app.use(bodyParser.json());
+app.use(cors());
 // Import Routes
-const postsRoutes = require('./routes/posts');
+const postRoutes = require('./routes/post');
+const getRoutes = require('./routes/get');
 
 // declare middleware to go to the correct sub routes
-app.use('/posts', postsRoutes);
-
+app.use('/post', postRoutes);
+app.use('/get', getRoutes);
 // Routes for the api
-app.get('/', (req, res) => {
-    res.send('We are home');
-});
+// app.get('/', (req, res) => {
+//     res.send('We are home');
+// });
 
 // Connect to the database
 mongoose.connect(
