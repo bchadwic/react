@@ -12,7 +12,7 @@ import Modal from './Modal';
 const App = () => {
 
     const isDefault = useSelector(state => state.isDefault);
-    const isAdding = false;
+    const isAdding = useSelector(state => state.isAdding);
 
     return (
         <div className="App">

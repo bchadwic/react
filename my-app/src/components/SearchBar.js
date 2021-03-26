@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import InputGroup from "react-bootstrap/InputGroup";
 import FormControl from "react-bootstrap/FormControl";
 import { useDispatch, useSelector } from "react-redux";
-import { setWord, setDefault } from '../actions';
+import { setWord, setDefault, setAdd } from '../actions';
 import '../styles/SearchBar.css';
 
 const SearchBar = () => {
@@ -27,7 +27,12 @@ const SearchBar = () => {
         }
     }
 
+    const addHandler = (e) => {
+        e.preventDefault();
+        dispatch(setAdd());
+    }
 
+    
     return (
         <Container>
             <form onSubmit={handleSubmit}>
@@ -42,7 +47,7 @@ const SearchBar = () => {
                             </Button>
                         </InputGroup>
                         <InputGroup>
-                            <Button id='Add-Button' className='ml-2' type='submit'>
+                            <Button id='Add-Button' className='ml-2' onClick={addHandler} type='submit'>
                                 <svg id='Add-Symbol' width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
                                     <path d="M11 11v-11h1v11h11v1h-11v11h-1v-11h-11v-1h11z"/>
                                 </svg>
