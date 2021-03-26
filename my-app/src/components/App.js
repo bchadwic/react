@@ -7,6 +7,7 @@ import SearchBar from './SearchBar';
 import Results from './Results';
 import Footnote from './Footnote';
 import '../styles/App.css';
+import Modal from './Modal';
 
 const App = () => {
 
@@ -17,6 +18,7 @@ const App = () => {
             <Header/>
             <Word />
             <SearchBar />
+            <Modal />
             {isDefault ? <Footnote /> : <Results />}
         </div>
   );
