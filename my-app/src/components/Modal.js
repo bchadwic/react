@@ -5,19 +5,24 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { unsetAdd } from '../actions';
 import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 
 const Modal = () => {
 
-
     const dispatch = useDispatch();
+    const setFade = false;
+
+    useEffect(() => {
+        setFade = !setFade;
+    }, []);
 
     const closeHandler = () => {
         dispatch(unsetAdd());
-    }
+    };
 
     return (
         <div className="Modal-Back-Drop">
-        <div className="Modal">
+        <div className='Modal {setFade ? Modal-Fade-In : Modal-Fade-Out}'>
             <div className="Modal-Header">
                 <h4>Contribute to the dictionary!</h4>
                 <button onClick={closeHandler}>X</button>
