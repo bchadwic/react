@@ -1,5 +1,7 @@
 .Divider {
+    margin: auto;
     height: 1px;
+    max-width: 1000px;
     background-color: black;
 }
 
@@ -83,5 +85,5 @@
 
 .Result-Root {
     overflow-y: scroll;
-    height: 360px;
+    max-height: 60vh;
 }

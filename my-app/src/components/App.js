@@ -12,13 +12,14 @@ import Modal from './Modal';
 const App = () => {
 
     const isDefault = useSelector(state => state.isDefault);
+    const isAdding = false;
 
     return (
         <div className="App">
             <Header/>
             <Word />
             <SearchBar />
-            <Modal />
+            {isAdding ? <Modal /> : ""}
             {isDefault ? <Footnote /> : <Results />}
         </div>
   );
