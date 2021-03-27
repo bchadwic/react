@@ -1,5 +1,6 @@
 const bodyParser = require('body-parser');
 const express = require('express');
+const router = express.Router();
 const mongoose = require('mongoose');
 const cors = require('cors');
 require('dotenv/config');
@@ -28,6 +29,19 @@ app.use('/get', getRoutes);
 // app.get('/', (req, res) => {
 //     res.send('We are home');
 // });
+
+
+// get the word of the day
+app.get('/wotd', async (req, res) => {
+    try {
+        const posts = await Post.find(); 
+// Post.collection.aggregate([{$sample: {size: 1}}]);
+        res.json(posts);
+    } catch(err) {
+        res.json({message : err});
+    }
+
+});
 
 // Connect to the database
 mongoose.connect(
