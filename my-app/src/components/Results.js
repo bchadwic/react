@@ -21,7 +21,7 @@ const Results = () => {
 
     useEffect(() => {
             // TODO change localhost to domain name once my-app is implemented on the server
-            fetch('http://localhost:3001/get/' + currentWord)
+            fetch('http://localhost:3001/get/findWord' + currentWord)
             .then(response => response.json())
             .then(
                 (results) => {

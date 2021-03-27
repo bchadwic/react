@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import InputGroup from "react-bootstrap/InputGroup";
 import FormControl from "react-bootstrap/FormControl";
 import { useDispatch, useSelector } from "react-redux";
-import { setWord, setDefault, setAdd } from '../actions';
+import { setWord, unsetDefault, setAdd } from '../actions';
 import '../styles/SearchBar.css';
 
 const SearchBar = () => {
@@ -28,8 +28,10 @@ const SearchBar = () => {
         fetch from the api, all the objects attached to this word
         
         */
+
+
         if(isDefault){
-            dispatch(setDefault());
+            dispatch(unsetDefault());
         }
     }
 

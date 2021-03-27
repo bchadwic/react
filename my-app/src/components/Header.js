@@ -2,12 +2,22 @@
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import '../styles/Header.css';
+import { useDispatch } from 'react-redux';
+import { setDefault } from '../actions';
 
 const Header = () => {
+
+    const dispatch = useDispatch();
+
+    const handleHome = (e) => {
+        dispatch(setDefault());
+
+    }
+
     return (
         <div id='Header'>
             <Navbar expand='sm'>
-                <Navbar.Brand href='#' id='Brand'>Word Bubble</Navbar.Brand>
+                <Navbar.Brand id='Brand' href='#' onClick={handleHome}>Word Bubble</Navbar.Brand>
                 <Navbar.Toggle id='Mobile-Nav-Button'/>
                 <Navbar.Collapse className='justify-content-end'>
                     <Nav id="Mobile-Collapse" className='mx-0 px-0'>
