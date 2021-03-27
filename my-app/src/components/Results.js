@@ -11,33 +11,35 @@ const Results = () => {
     //         {date: "12/22/21", definition : "Hello World", rank: -22334242, user: "Joe"}
     //     ];
 
-    const [results, setResults] = useState(
-        fetch('http://localhost:3001/get/Hello')
-        .then(response => response.json())
-        .then(data => console.log(data))
-        .catch(err => console.log(err))
-    );
+    const [results, setResults] = useState([]);
 
-    // useEffect(() => {
-    //     const results = fetch('http://localhost:3001/get/Hello')
-    //                     .then(response => response.json())
+    
 
-    // });
+    useEffect(() => {
+            fetch('http://localhost:3001/get/')
+            .then(response => response.json())
+            .then(
+                (results) => {
+                    setResults(results);
+                }
+            )
+            .catch(err => console.log(err))
+
+    }, []);
 
     return (
         <div>
             <div className="Divider mt-3"></div>
             <div className="Result-Root">
                 <div className="Results">
-                    {/* {results.map(result => ( 
+                    {results.map(result => ( 
                         <Result 
                             definition = {result.definition} 
                             rank       = {result.rank} 
                             user       = {result.user} 
                             date       = {result.date} 
                         />
-                    ))} */
-                    console.log("these are the results " + JSON.parse(results[0].name))}
+                    ))}
                 </div>
             </div>
             <div className="Divider mb-4"></div>
