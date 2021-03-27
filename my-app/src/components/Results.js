@@ -1,6 +1,7 @@
 import Result from './results-components/Result';
 import '../styles/Results.css';
-import { useEffect, useState } from 'react';
+import { React, useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 
 const Results = () => {
 
@@ -11,12 +12,15 @@ const Results = () => {
     //         {date: "12/22/21", definition : "Hello World", rank: -22334242, user: "Joe"}
     //     ];
 
+    // future reference, make this an empty array by default to be able to use
     const [results, setResults] = useState([]);
+    const currentWord = useSelector(state => state.currentWord);
+
 
     
 
     useEffect(() => {
-            fetch('http://localhost:3001/get/')
+            fetch('http://localhost:3001/get/' + currentWord)
             .then(response => response.json())
             .then(
                 (results) => {
