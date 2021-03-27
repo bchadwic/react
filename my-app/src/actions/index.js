@@ -7,13 +7,13 @@ export const setWord = (word) => {
 
 export const setDefault = () => {
     return {
-        type: 'NOT_DEFAULT_WORD'
+        type: 'SET_HOME'
     };
 };
 
 export const unsetDefault = () => {
     return {
-        type: 'DEFAULT_WORD'
+        type: 'SET_SEARCH'
     };
 };
 

@@ -1,7 +1,9 @@
 const defaultReducer = (state = true, action) => {
     switch(action.type){
-        case 'NOT_DEFAULT_WORD':
-            return false;
+        case 'SET_HOME':
+            return true;
+        case 'SET_SEARCH':
+            return false; 
         default:
             return state;
     }
