@@ -25,8 +25,8 @@ const Modal = () => {
         <div className="Modal-Back-Drop">
         <div className='Modal'>
             <div className="Modal-Header">
-                <h4>Contribute to the dictionary!</h4>
-                <button onClick={closeHandler}>X</button>
+                <h4 className='Modal-Contribute'>Contribute to the dictionary!</h4>
+                <h4 className='Modal-Exit' onClick={closeHandler}>X</h4>
             </div>
             <Form>
                     <div className="Modal-Word">
