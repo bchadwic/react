@@ -30,9 +30,10 @@ router.get('/route', async (req, res)  => {
 // get the word of the day
 // TODO get the word of the day working with the words collection. Can get line 35 to work right, will fix tomorrow
 router.get('/wotd/', async (req, res) => {
+    let count = Post.words.count(); 
+    console.log(count);
     try {
-        console.log('getting the wotd');
-        const posts = await db.Words.aggregate([{$sample:{size:1}}]);
+        const posts = await Post.find();
         res.json(posts);
     } catch(err) {
         res.json({message : err});
