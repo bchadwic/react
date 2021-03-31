@@ -31,17 +31,6 @@ app.use('/get', getRoutes);
 // });
 
 
-// get the word of the day
-app.get('/wotd', async (req, res) => {
-    try {
-        const posts = await Post.find(); 
-// Post.collection.aggregate([{$sample: {size: 1}}]);
-        res.json(posts);
-    } catch(err) {
-        res.json({message : err});
-    }
-
-});
 
 // Connect to the database
 mongoose.connect(
@@ -49,6 +38,20 @@ mongoose.connect(
     { useNewUrlParser: true },
     () => console.log('Connected to the DB')
 );
+
+
+router.get('/', async (req, res) => {
+    console.log('getting the wotd!!!');
+    try {
+        console.log('getting the length');
+        let count = mongoose.connection.count(); 
+        console.log(count + " hello");
+        const posts = await Post.find();
+        res.json(posts);
+    } catch(err) {
+        res.json({message : err});
+    }
+});
 
 
 

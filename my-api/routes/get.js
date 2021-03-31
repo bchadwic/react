@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const Post = require('../models/Post');
+const mongoose = require('mongoose');
+const { db } = require('../models/Post');
 
 // router.get('/', (req, res) => {
 //     res.send('This is the posts routes folder');
@@ -28,12 +30,9 @@ router.get('/route', async (req, res)  => {
 });
 
 // get the word of the day
-// TODO get the word of the day working with the words collection. Can get line 35 to work right, will fix tomorrow
-router.get('/wotd/', async (req, res) => {
-    let count = Post.words.count(); 
-    console.log(count);
+router.get('/randomWord', async (req, res) => {
     try {
-        const posts = await Post.find();
+        const posts = await Post.aggregate([{ $sample: { size: 1 } }]);
         res.json(posts);
     } catch(err) {
         res.json({message : err});
