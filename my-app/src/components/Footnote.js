@@ -6,7 +6,7 @@ import { Button } from 'react-bootstrap';
 const Footnote = () => {
 
     const [randomWord, setRandomWord] = useState("");
-    const dispatch = useDispatch;
+    const dispatch = useDispatch();
 
     useEffect(() => {
                 // TODO change localhost to domain name once my-app is implemented on the server
@@ -23,12 +23,11 @@ const Footnote = () => {
 
     const randomWordHandler = (e) => {
         e.preventDefault();
-        dispatch(setDefault());
+        dispatch(setWord(randomWord));
     }
 
-    // TODO get passed the redux conflict by changing th current word to the random word selectd, that is shown
     return (
-        <h5 className='mt-3'>Learn a new word <Button onClick={() => {dispatch(setWord(randomWord))}}>{randomWord}</Button>.</h5>
+        <h5 className='mt-3'>Learn a new word <Button onClick={randomWordHandler}>{randomWord}</Button>.</h5>
     )
 }
 
