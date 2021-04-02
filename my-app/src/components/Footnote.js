@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { setWord, setDefault } from '../actions';
+import { setWord, unsetDefault } from '../actions';
 import { Button } from 'react-bootstrap';
 
 const Footnote = () => {
@@ -24,6 +24,7 @@ const Footnote = () => {
     const randomWordHandler = (e) => {
         e.preventDefault();
         dispatch(setWord(randomWord));
+        dispatch(unsetDefault());
     }
 
     return (

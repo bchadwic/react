@@ -40,19 +40,6 @@ mongoose.connect(
 );
 
 
-router.get('/', async (req, res) => {
-    console.log('getting the wotd!!!');
-    try {
-        console.log('getting the length');
-        let count = mongoose.connection.count(); 
-        console.log(count + " hello");
-        const posts = await Post.find();
-        res.json(posts);
-    } catch(err) {
-        res.json({message : err});
-    }
-});
-
 
 
 // Listen for our requests (default port 3001)
