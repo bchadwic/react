@@ -3,6 +3,7 @@ const router = express.Router();
 const Post = require('../models/Post');
 
 router.post('/', async (req, res) => {
+    console.log(req);
     const post = new Post({
         word: req.body.word,
         definition: req.body.definition,

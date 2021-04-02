@@ -19,7 +19,7 @@ router.get('/findWord/:word', async (req, res) => {
 
 });
 
-router.get('/route', async (req, res)  => {
+router.get('/', async (req, res)  => {
     try {
         const posts = await Post.find();
         res.json(posts);
