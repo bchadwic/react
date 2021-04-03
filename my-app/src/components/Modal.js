@@ -23,7 +23,6 @@ const Modal = () => {
     const closeHandler = () => {
         dispatch(unsetAdd());
     };
-//Modal {setFade ? Modal-Fade-In : Modal-Fade-Out}
 
     const wordChangeHandler = (e) => {
         switch(e.target.name){
@@ -41,16 +40,23 @@ const Modal = () => {
 
     const wordSubmitHandler = (e) => {
         e.preventDefault();
-        console.log("Word state is set to " + addWord);
-        console.log("Definition state is set to " + addDefinition);
+        // TODO move capitalization function to server validation once server validation is in process
+        let validatedAddWords = addWord.split(' ');
+        for(let i = 0; i < validatedAddWords.length; i++){
+            validatedAddWords[i] = validatedAddWords[i][0].toUpperCase() + validatedAddWords[i].substr(1);
+        }
+        validatedAddWords = validatedAddWords.join(' ');
         const url = "http://localhost:3001/post/";
-        const body = { word: addWord, definition: addDefinition};
+        const body = { word: validatedAddWords, definition: addDefinition};
         fetch(url, { method: 'POST', 
             body: JSON.stringify(body),
             headers:{ 'Content-Type': 'application/json' } })
             .then(res => res.json())
             .catch(error => console.error('Error:', error))
             .then(response => console.log('Success:', response)); 
+        dispatch(setWord(validatedAddWords));
+        closeHandler();
+        
     }
 
     return (
