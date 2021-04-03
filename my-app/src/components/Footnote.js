@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { setWord, unsetDefault } from '../actions';
-import { Button } from 'react-bootstrap';
+import '../styles/Footnote.css';
 
 const Footnote = () => {
 
@@ -17,9 +17,10 @@ const Footnote = () => {
                     setRandomWord(result[0].word);
                 }
             )
-            .catch(err => console.log(err))
+            .catch(err => console.log(err));
+            console.log("running effect");
 
-    }, [randomWord]);
+    }, []);
 
     const randomWordHandler = (e) => {
         e.preventDefault();
@@ -28,7 +29,7 @@ const Footnote = () => {
     }
 
     return (
-        <h5 className='mt-3'>Learn a new word <Button onClick={randomWordHandler}>{randomWord}</Button>.</h5>
+        <h5 className='mt-3'>Learn a new word <u onClick={randomWordHandler} class="Random-Word">{randomWord}</u>.</h5>
     )
 }
 

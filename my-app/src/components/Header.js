@@ -3,7 +3,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import '../styles/Header.css';
 import { useDispatch } from 'react-redux';
-import { setDefault } from '../actions';
+import { setDefault, setWord } from '../actions';
 
 const Header = () => {
 
@@ -11,6 +11,7 @@ const Header = () => {
 
     const handleHome = (e) => {
         dispatch(setDefault());
+        dispatch(setWord("Word Bubble"));
 
     }
 

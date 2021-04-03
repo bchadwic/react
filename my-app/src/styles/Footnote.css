@@ -1,0 +1,9 @@
+.Random-Word {
+    cursor: pointer;   
+    color: rgb(44, 152, 253);
+    
+}
+
+.Random-Word:hover {
+    color: rgb(40, 131, 216);
+}
